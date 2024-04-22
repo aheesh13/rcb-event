@@ -4,6 +4,7 @@ import CustomCarousel from './Components/Carousal';
 import ContactUs from './Components/ContactUs';
 import RefundPolicy from './Components/RefundPolicy'; 
 import Menu from './Components/MenuComponent';
+import Cards from './Components/Cards';
 
 const App = () => {
   return (
@@ -13,7 +14,8 @@ const App = () => {
         <Routes>
           <Route path="/" element={<CustomCarousel />} />
           <Route path="/contact" element={<ContactUs />} />
-          <Route path="/terms" element={<RefundPolicy />} />
+          <Route path="/terms" element={<Cards/>} />
+          <Route path="/cards" element={<Cards/>}/>
         </Routes>
       </div>
     </Router>
