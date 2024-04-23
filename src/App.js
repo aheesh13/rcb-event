@@ -14,7 +14,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<CustomCarousel />} />
           <Route path="/contact" element={<ContactUs />} />
-          <Route path="/terms" element={<Cards/>} />
+          <Route path="/terms" element={<RefundPolicy/>} />
           <Route path="/cards" element={<Cards/>}/>
         </Routes>
       </div>

@@ -4,6 +4,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '../CustomCss/Carousel.css';
 import AdditionalContent from './AdditionalContent';
+import Cards from './Cards';
 
 const CustomCarousel = () => {
   const settings = {
@@ -41,6 +42,9 @@ const CustomCarousel = () => {
         </div>
       </Slider>
       <AdditionalContent />
+      <div className='home-card-container'>
+           <Cards/>
+        </div>
     </div>
   );
 };

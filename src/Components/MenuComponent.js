@@ -5,7 +5,9 @@ const Menu = () => {
   return (
     <div className="menu">
       <div className="logo">
+      <Link to="/" className="nav-link">
       <img src="/Images/logo.png" alt="RCB Logo" className='logo'/>
+      </Link>
       </div>
       <div className="navigation">
         <Link to="/" className="nav-link">
