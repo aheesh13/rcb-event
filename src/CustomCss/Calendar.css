@@ -1,0 +1,62 @@
+/* Calendar.css */
+.calendar-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.calendar {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 300px;
+  padding: 10px;
+  background-color: #ffcccb;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.calendar-header button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.calendar-month {
+  color: #fff; /* Set the color of the month */
+}
+.separator {
+  margin: 0 10px; /* Add margin to create space between day names and month */
+}
+
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.calendar-day {
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  /* border: 1px solid #ccc;*/
+}
+
+.day-number {
+  color: #fff; /* Set the color of the day number */
+}
+
+.day-name {
+  background-color: white;
+  border: none;
+}
+
+.selected-day {
+  color: white;
+}

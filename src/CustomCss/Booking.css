@@ -1,0 +1,36 @@
+.booking-container {
+  display: flex;
+}
+
+.image-container {
+  width: 30%; /* Adjust width as needed */
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.booking-details {
+  margin-left: 20px;
+}
+
+.calendar-container {
+  flex: 1; /* Take up remaining space */
+  padding-left: 20px; /* Add padding for spacing */
+}
+
+.number-of-person {
+  margin-top: 20px; /* Add margin-top for spacing */
+}
+
+.occasion-select {
+  margin-top: 10px;
+}
+/* Booking.css */
+.occasion-select {
+  border: 1px solid #ccc; /* Add border */
+  padding: 10px; /* Add padding for spacing */
+}
+
+/* Add additional styling as needed */

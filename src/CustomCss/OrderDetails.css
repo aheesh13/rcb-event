@@ -1,0 +1,43 @@
+.order-details {
+  margin-left: 20px; /* Adjust margin as needed */
+}
+
+.order-summary table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.order-summary th,
+.order-summary td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+.order-total table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.order-total th,
+.order-total td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+.payment-options button {
+  margin-right: 10px;
+}
+
+.coupon-section input[type="text"] {
+  margin-right: 10px;
+}
+
+.payment-provider {
+  margin-top: 20px;
+}
+
+.terms-condition label {
+  display: block;
+}

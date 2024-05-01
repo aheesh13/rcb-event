@@ -1,0 +1,22 @@
+/* TimeSlots.css */
+.time-slots {
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.slots-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.time-slot {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 15px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.selected {
+  background-color: #ffcccb;
+}
