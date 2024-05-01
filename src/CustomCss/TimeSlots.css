@@ -1,34 +1,22 @@
-// TimeSlots.js
-import React, { useState } from "react";
-import "./TimeSlots.css";
+/* TimeSlots.css */
+.time-slots {
+  margin-top: 10px;
+  margin-left: 20px;
+}
 
-const TimeSlots = ({ selectedDate }) => {
-  // Example time slots (you can replace this with your own data)
-  const timeSlots = ["10:00 AM", "12:00 PM", "2:00 PM", "4:00 PM"];
-  const [selectedSlot, setSelectedSlot] = useState(null);
+.slots-container {
+  display: flex;
+  flex-wrap: wrap;
+}
 
-  const handleSlotClick = (slot) => {
-    setSelectedSlot(slot === selectedSlot ? null : slot);
-  };
+.time-slot {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 15px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
 
-  return (
-    <div className="time-slots">
-      <h3>Available Time Slots for {selectedDate.toLocaleDateString()}</h3>
-      <div className="slots-container">
-        {timeSlots.map((slot, index) => (
-          <div
-            key={index}
-            className={
-              selectedSlot === slot ? "time-slot selected" : "time-slot"
-            }
-            onClick={() => handleSlotClick(slot)}
-          >
-            {slot}
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-};
-
-export default TimeSlots;
+.selected {
+  background-color: #ffcccb;
+}
