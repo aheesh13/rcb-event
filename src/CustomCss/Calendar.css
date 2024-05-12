@@ -1,62 +1,95 @@
 /* Calendar.css */
+
 .calendar-container {
   display: flex;
-  justify-content: center;
-  margin-top: 20px;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
 }
 
 .calendar {
+  width: 500px; /* Increase width to avoid trimming */
   border: 1px solid #ccc;
-  border-radius: 5px;
-  width: 300px;
-  padding: 10px;
-  background-color: #ffcccb;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .calendar-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-weight: bold;
-  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
 }
 
 .calendar-header button {
   background: none;
   border: none;
+  color: #fff;
+  font-size: 1.2rem;
   cursor: pointer;
-  font-size: 16px;
 }
 
-.calendar-month {
-  color: #fff; /* Set the color of the month */
+.calendar-header button:focus {
+  outline: none;
 }
-.separator {
-  margin: 0 10px; /* Add margin to create space between day names and month */
+
+.calendar-header button:hover {
+  opacity: 0.8;
+}
+
+.calendar-header div {
+  font-size: 1.2rem;
 }
 
 .calendar-days {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 5px;
+  gap: 2px;
 }
 
 .calendar-day {
+  padding: 10px;
   text-align: center;
-  padding: 5px;
-  border-radius: 5px;
-  /* border: 1px solid #ccc;*/
+  cursor: pointer; /* Add cursor pointer to indicate clickable */
+  transition: background-color 0.3s ease; /* Smooth transition */
 }
 
-.day-number {
-  color: #fff; /* Set the color of the day number */
+.calendar-day:hover {
+  background-color: lavender
 }
 
 .day-name {
-  background-color: white;
-  border: none;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .selected-day {
-  color: white;
+  color: white; /* Text color */
+  border-radius: 200%; /* Ensure perfect circle */
+  animation: pulse 0.5s;
+  background-color: black; /* Background color */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+  transition: transform 0.2s, box-shadow 0.2s; /* Smooth transition */
+}
+
+.selected-day:hover {
+  transform: scale(1.1); /* Scale up on hover */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+}
+
+
+
+/* Keyframes for pulse animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

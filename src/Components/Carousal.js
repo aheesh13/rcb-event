@@ -41,10 +41,10 @@ const CustomCarousel = () => {
           </div>
         </div>
       </Slider>
-      <AdditionalContent />
-      <div className='home-card-container'>
+      <div className='additional-content'>
+        <AdditionalContent />
+      </div>
            <Cards/>
-        </div>
     </div>
   );
 };

@@ -1,36 +1,121 @@
+
+
+/* Container for the booking details */
 .booking-container {
   display: flex;
+  animation: fadeIn 0.5s ease-in-out; /* Apply fade-in animation */
 }
 
-.image-container {
-  width: 30%; /* Adjust width as needed */
+/* Container for the image */
+.booking-image-container {
+  width: 700px; /* Adjust width as needed */
 }
 
-.image-container img {
+/* Image inside the container */
+.booking-image-container img {
   max-width: 100%;
   height: auto;
+  border-radius: 10px; /* Add border radius to image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow to image */
 }
 
+/* Container for the booking details */
 .booking-details {
   margin-left: 20px;
 }
 
-.calendar-container {
-  flex: 1; /* Take up remaining space */
-  padding-left: 20px; /* Add padding for spacing */
-}
-
-.number-of-person {
-  margin-top: 20px; /* Add margin-top for spacing */
-}
-
-.occasion-select {
-  margin-top: 10px;
-}
-/* Booking.css */
-.occasion-select {
-  border: 1px solid #ccc; /* Add border */
+/* Input field for number of persons */
+.number-of-person input[type="number"] {
+  width: 100px; /* Adjust width as needed */
   padding: 10px; /* Add padding for spacing */
+  border: 1px solid #ccc; /* Add border */
+  border-radius: 20px; /* Make border radius round */
+  transition: border-color 0.3s ease-in-out; /* Smooth transition */
+  font-family: 'Roboto', sans-serif; /* Specify font family */
+  font-size: 16px; /* Specify font size */
 }
 
-/* Add additional styling as needed */
+/* Apply hover effect to input field */
+.number-of-person input[type="number"]:hover {
+  border-color: #007bff; /* Change border color on hover */
+}
+
+/* Container for occasion selection */
+.booking-occasion-select {
+  margin-top: 20px;
+}
+
+/* Style for radio buttons and labels */
+.booking-occasion-select input[type="radio"] {
+  display: none; /* Hide the default radio buttons */
+}
+
+.booking-occasion-select label {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-right: 10px;
+  background-color: #f0f0f0; /* Background color for labels */
+  color: #333; /* Text color for labels */
+  border-radius: 20px; /* Make border radius round */
+  cursor: pointer; /* Change cursor to pointer */
+  transition: background-color 0.3s ease-in-out; /* Smooth transition */
+  font-family: 'Jersey', sans-serif; /* Specify font family */
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Apply hover effect to labels */
+.booking-occasion-select label:hover {
+  background-color: #007bff; /* Change background color on hover */
+  color: #fff; /* Text color on hover */
+}
+
+/* Style for custom radio buttons */
+.booking-occasion-select input[type="radio"] + label::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border: 2px solid #333; /* Border for radio button */
+  border-radius: 50%; /* Make border radius round */
+  transition: background-color 0.3s ease-in-out; 
+}
+
+
+.booking-occasion-select input[type="radio"]:checked + label::before {
+  background-color: #007bff; 
+}
+
+
+.booking-num-person-label {
+  display: inline-block; 
+  font-family: 'Roboto', sans-serif; 
+  font-size: 18px; 
+  color: #333;
+  margin-bottom: 10px; 
+  transition: color 0.3s ease-in-out; 
+}
+
+
+.booking-num-person-label:hover {
+  color: black; 
+  cursor: pointer; 
+}
+
+
+.payment-proceed-button {
+  padding: 12px 24px; 
+  background-color: #007bff; 
+  color: #fff; 
+  border: none; 
+  border-radius: 20px; 
+  cursor: pointer; 
+  font-family: 'Roboto', sans-serif; 
+  font-size: 16px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.payment-proceed-button:hover {
+  background-color: #0056b3;
+}

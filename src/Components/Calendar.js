@@ -1,6 +1,6 @@
 // Calendar.js
 import React, { useState } from "react";
-import "./Calendar.css"; // Import your CSS file for styling
+import "../CustomCss/Calendar.css"; // Import your CSS file for styling
 import TimeSlots from "./TimeSlots";
 
 const Calendar = ({ selectedDate, onDateChange }) => {

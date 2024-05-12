@@ -1,9 +1,9 @@
 /* Card.css */
 .card {
-  margin: 80px;
+  margin: 80px; /* Adjust margin as needed */
 }
 
-.image-container {
+.card-image-container {
   position: relative;
   width: 600px; /* Set the width of the image container */
   height: 600px; /* Set the height of the image container */
@@ -36,21 +36,19 @@
 
 .content {
   text-align: center;
-  background-color:transparent;
 }
 
 .card-text {
-  color: whitesmoke !important; 
-  font-size: 30px !important; 
-  line-height: 1.5 !important; 
-  padding: 20px !important; 
-  border-radius: 10px !important;
+  color: #fff;
+  font-size: 20px;
+  line-height: 1.5;
+  padding: 10px;
+  border-radius: 5px;
 }
 
-
-.btn {
+.book-button {
   text-decoration: none;
-  padding: 10px 10px;
+  padding: 10px 20px;
   color: #fff;
   background-color: rgba(0, 123, 255, 0.7); /* Transparent blue */
   border-radius: 5px;
@@ -58,10 +56,11 @@
   margin-top: 20px;
 }
 
-.btn:hover {
+.book-button:hover {
   background-color: rgba(0, 123, 255, 0.9); /* Darker transparent blue */
 }
 
 .card-container {
   display: flex; /* Display children side by side */
+
 }

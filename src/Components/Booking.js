@@ -1,20 +1,21 @@
-// Booking.js
 import React, { useState } from "react";
-import Calendar from "./Calendar"; // Import your Calendar component
-import "./Booking.css";
-import image1 from "../public/image.png";
+import Calendar from "./Calendar"; 
+import "../CustomCss/Booking.css";
+import image1 from "../Images/Img1.jpeg";
+import { Link, useNavigate } from 'react-router-dom';
 
 const Booking = () => {
+  const navigate = useNavigate();
   const [selectedDate, setSelectedDate] = useState(null);
   const [numberOfPersons, setNumberOfPersons] = useState(1);
   const [selectedOccasion, setSelectedOccasion] = useState("");
 
-  // Handler for date selection
+
   const handleDateChange = (date) => {
     setSelectedDate(date);
   };
-
-  // Handler for number of persons selection
+ 
+ 
   const handleNumberOfPersonsChange = (event) => {
     setNumberOfPersons(parseInt(event.target.value));
   };
@@ -23,18 +24,37 @@ const Booking = () => {
     setSelectedOccasion(e.target.value);
   };
 
+  const handleProceedToPayment = () => {
+    console.log("State being passed:", {
+      date: selectedDate,
+      persons: numberOfPersons,
+      occasion: selectedOccasion
+    });
+  
+    navigate("/payment", {
+      state: {
+        bookingDetails: { 
+          date: selectedDate,
+          persons: numberOfPersons,
+          occasion: selectedOccasion
+        } 
+      }
+    });
+  };
+  
+
   return (
     <div className="booking-container">
-      <div className="image-container">
+      <div className="booking-image-container">
         <img src={image1} alt="Your Image" />
       </div>
       <div className="booking-details">
         <h2>Booking Details</h2>
-        {/* Calendar component */}
+  
         <Calendar selectedDate={selectedDate} onDateChange={handleDateChange} />
-        {/* Number of persons selection */}
-        <div class="number=of=person">
-          <label htmlFor="numberOfPersons">Number of Persons:</label>
+        
+        <div className="number-of-person">
+          <label className="booking-num-person-label" htmlFor="numberOfPersons">Number of Persons:</label>
           <input
             type="number"
             id="numberOfPersons"
@@ -44,8 +64,8 @@ const Booking = () => {
             onChange={handleNumberOfPersonsChange}
           />
         </div>
-        <div className="occasion-select">
-          <label>Please select your occasion:</label>
+        <div className="booking-occasion-select">
+          <label className="occasion-label">Please select your occasion:</label>
           <div>
             <input
               type="radio"
@@ -101,10 +121,13 @@ const Booking = () => {
             />
             <label htmlFor="movie-time">Movie Time</label>
           </div>
-          {/* Add radio inputs for other occasions */}
+        
         </div>
-        {/* Additional booking details */}
-        {/* Add any other booking details or components here */}
+        
+          <button onClick={handleProceedToPayment} className="payment-proceed-button">Proceed To Payment</button>
+
+       
+      
       </div>
     </div>
   );

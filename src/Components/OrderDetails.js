@@ -1,7 +1,14 @@
 import React from "react";
-import "./OrderDetails.css"; // You can create a CSS file for styling
+import "../CustomCss/OrderDetails.css";
+import { useLocation } from 'react-router-dom';
 
 const OrderDetails = () => {
+  const location = useLocation();
+  const bookingDetails = location.state ? location.state.bookingDetails : null;
+  // console.log(bookingDetails);
+  if (!bookingDetails) {
+    return <div>Loading...</div>;
+  }
   return (
     <div className="order-details">
       <h2>Your Order</h2>
@@ -22,16 +29,14 @@ const OrderDetails = () => {
           </tbody>
         </table>
         <div className="booking-details">
-          <p>Booking Date: April 25, 2024</p>
-          <p>Booking Time: 10:30 am</p>
-          <p>Persons: 2</p>
-          <p>Time Zone: Asia/Calcutta</p>
-          <p>Please select your occasion: Bride2Be</p>
+          {/* <p>Booking Date: {bookingDetails.date}</p> */}
+          <p>Persons: {bookingDetails.persons}</p>
+          <p>Booking Occasion: {bookingDetails.occasion}</p>
         </div>
       </div>
       <div className="order-total">
         <table>
-          <tbody>
+        <tbody>
             <tr>
               <td>Subtotal</td>
               <td>₹ 1,500</td>
@@ -51,7 +56,6 @@ const OrderDetails = () => {
           </tbody>
         </table>
         <div className="payment-options">
-          <button>Pay deposit</button>
           <button>Pay full amount</button>
         </div>
         <div className="coupon-section">
@@ -62,8 +66,7 @@ const OrderDetails = () => {
         <div className="payment-provider">
           <p>PhonePe Payment Solutions</p>
           <p>
-            All UPI apps, Debit and Credit Cards, and NetBanking accepted |
-            Powered by PhonePe
+            All UPI apps, Debit and Credit Cards, and NetBanking accepted | Powered by PhonePe
           </p>
         </div>
         <div className="terms-condition">
