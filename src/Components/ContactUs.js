@@ -2,7 +2,7 @@ import React from 'react';
 import '../CustomCss/ContactUs.css'; 
 const ContactUs = () => {
   return (
-    <div className="content">
+    <div className="contact-content">
         <div className="contact-image">
         <img src="/Images/Img1.jpeg" alt="Contact Us" className="contact-img" />
       </div>

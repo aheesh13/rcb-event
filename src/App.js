@@ -7,6 +7,7 @@ import Menu from './Components/MenuComponent';
 import Cards from './Components/Cards';
 import Booking from './Components/Booking';
 import OrderDetails from './Components/OrderDetails';
+import './styles.css';
 
 const App = () => {
   return (

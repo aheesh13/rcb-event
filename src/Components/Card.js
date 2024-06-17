@@ -8,8 +8,8 @@ const Card = ({ imageUrl, description }) => {
     <div className="card">
       <div className="card-image-container">
         <img className="card-img" src={imageUrl} alt="Card image" />
-        <div className="overlay">
-          <div className="content">
+        <div className="card-overlay">
+          <div className="card-content">
             <p className="card-text">{description}</p>
             <Link to="/booking" className="nav-link">
           <button className="book-button">BOOK NOW</button>
