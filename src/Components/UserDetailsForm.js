@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./UserDetailsForm.css"; // You can create a CSS file for styling
+import "../CustomCss/UserDetailsForm.css";
 
 const UserDetailsForm = () => {
   const [formData, setFormData] = useState({

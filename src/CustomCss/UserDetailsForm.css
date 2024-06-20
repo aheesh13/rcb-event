@@ -1,59 +1,88 @@
 .user-details-form {
-    width: 400px; /* Adjust width as needed */
-    border: 1px solid #ccc;
-    padding: 20px;
-  }
-  
-  .form-group {
-    position: relative;
-    margin-bottom: 15px;
-  }
-  
-  label {
-    left: 10px;
-    top: 50%;
-  }
-  
-  input[type="text"],
-  input[type="email"],
-  input[type="tel"],
-  input[type="password"],
-  select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding-top: 20px;
-  }
-  
-  input[type="text"]::placeholder,
-  input[type="email"]::placeholder,
-  input[type="tel"]::placeholder,
-  input[type="password"]::placeholder,
-  select::placeholder {
-    color: rgba(0, 0, 0, 0.3); /* Adjust opacity as needed */
-  }
-  
-  input[type="text"]:focus + label,
-  input[type="email"]:focus + label,
-  input[type="tel"]:focus + label,
-  input[type="password"]:focus + label,
-  select:focus + label {
-    top: -12px;
-    font-size: 12px;
-    color: #555;
-  }
-  
-  input[type="text"]:not(:placeholder-shown) + label,
-  input[type="email"]:not(:placeholder-shown) + label,
-  input[type="tel"]:not(:placeholder-shown) + label,
-  input[type="password"]:not(:placeholder-shown) + label,
-  select:not(:placeholder-shown) + label {
-    top: -12px;
-    font-size: 12px;
-    color: #555;
-  }
-  
-  button[type="submit"] {
-    margin-top: 10px;
-  }
+  width: 400px;
+  padding: 20px;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+label {
+  left: 10px;
+  top: 50%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding-top: 20px;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="tel"]::placeholder,
+input[type="password"]::placeholder,
+select::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+input[type="text"]:focus + label,
+input[type="email"]:focus + label,
+input[type="tel"]:focus + label,
+input[type="password"]:focus + label,
+select:focus + label {
+  top: -12px;
+  font-size: 12px;
+  color: #555;
+}
+
+input[type="text"]:not(:placeholder-shown) + label,
+input[type="email"]:not(:placeholder-shown) + label,
+input[type="tel"]:not(:placeholder-shown) + label,
+input[type="password"]:not(:placeholder-shown) + label,
+select:not(:placeholder-shown) + label {
+  top: -12px;
+  font-size: 12px;
+  color: #555;
+}
+
+button[type="submit"] {
+  margin-top: 10px;
+  display: inline-block;
+padding: 10px 20px;
+background-color: #007bff;
+color: #fff;
+border: none;
+border-radius: 4px;
+font-size: 16px;
+cursor: pointer;
+}
+
+.user-details button:hover {
+  background-color: #0056b3;
+}
+
+.user-details h2 {
+  margin-bottom: 20px;
+}
+ 
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
