@@ -1,6 +1,6 @@
 .carousel-image {
     width: 100%;
-    height: 400px; 
+    height: 500px; 
     object-fit: cover; 
   }
   
@@ -45,7 +45,19 @@
   .additional-content {
     text-align: center;
     padding: 20px;
-    background-color: #f8f9fa; /* Background color for the additional content */
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count:2;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes fadeInAnimation{
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
   }
   
   .additional-content h2 {
@@ -118,6 +130,8 @@
   line-height: 1.5;
   color: #333;
 }
+
+
 
 /* Media Query for Responsive Design */
 @media (max-width: 768px) {

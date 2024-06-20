@@ -3,6 +3,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '../CustomCss/Carousel.css';
+import '../CustomCss/backgroundAnimation.css'; // Import the new CSS
 import AdditionalContent from './AdditionalContent';
 import Cards from './Cards';
 
@@ -21,6 +22,7 @@ const CustomCarousel = () => {
 
   return (
     <div className='container'>
+      <div className="dynamic-background"></div> {/* Add the dynamic background */}
       <Slider {...settings}>
         <div>
           <img src="/Images/Img1.jpeg" alt="Private Theater For Celebration And Movie Streaming" className="carousel-image" />
@@ -44,7 +46,7 @@ const CustomCarousel = () => {
       <div className='additional-content'>
         <AdditionalContent />
       </div>
-           <Cards/>
+      <Cards />
     </div>
   );
 };

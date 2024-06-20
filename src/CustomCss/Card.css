@@ -32,7 +32,7 @@
   align-items: center;
   background-color: transparent; /* Ensure no background color */
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 2s ease;
 }
 
 .card:hover .card-overlay {
@@ -81,4 +81,64 @@
 
 .card-container {
   display: flex; /* Display children side by side */
+  
+  justify-content: center; /* Center the cards horizontally */
+}
+
+@media (max-width: 768px) {
+  .card {
+    margin: 40px; /* Adjust margin for medium devices */
+  }
+
+  .card-image-container {
+    width: 400px; /* Adjust width for medium devices */
+    height: 400px; /* Adjust height for medium devices */
+  }
+
+  .card-text {
+    font-size: 18px; /* Adjust font size for medium devices */
+  }
+
+  .card:hover .card-text {
+    font-size: 30px; /* Adjust font size for medium devices */
+  }
+
+  .book-button {
+    padding: 8px 16px; /* Adjust padding for medium devices */
+  }
+
+  .card-container {
+    display: flex; /* Display children side by side */
+    flex-wrap: wrap;
+    justify-content: center; /* Center the cards horizontally */
+  }
+}
+
+@media (max-width: 430px) {
+  .card {
+    margin: 20px; /* Adjust margin for small devices */
+  }
+
+  .card-image-container {
+    width: 300px; /* Adjust width for small devices */
+    height: 300px; /* Adjust height for small devices */
+  }
+
+  .card-text {
+    font-size: 16px; /* Adjust font size for small devices */
+  }
+
+  .card:hover .card-text {
+    font-size: 26px; /* Adjust font size for small devices */
+  }
+
+  .book-button {
+    padding: 6px 12px; /* Adjust padding for small devices */
+  }
+
+  .card-container {
+    display: flex; /* Display children side by side */
+    flex-wrap: wrap;
+    justify-content: center; /* Center the cards horizontally */
+  }
 }
