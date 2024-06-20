@@ -5,6 +5,9 @@ import ContactUs from './Components/ContactUs';
 import RefundPolicy from './Components/RefundPolicy'; 
 import Menu from './Components/MenuComponent';
 import Cards from './Components/Cards';
+import Booking from './Components/Booking';
+import OrderDetails from './Components/OrderDetails';
+import './styles.css';
 
 const App = () => {
   return (
@@ -16,7 +19,9 @@ const App = () => {
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/terms" element={<RefundPolicy/>} />
           <Route path="/cards" element={<Cards/>}/>
-        </Routes>
+          <Route path='/booking' element={<Booking/>}/>
+          <Route path="/payment" element={<OrderDetails />} />
+          </Routes>
       </div>
     </Router>
   );

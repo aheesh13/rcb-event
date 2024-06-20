@@ -1,6 +1,6 @@
 // TimeSlots.js
 import React, { useState } from "react";
-import "./TimeSlots.css";
+import "../CustomCss/TimeSlots.css";
 
 const TimeSlots = ({ selectedDate }) => {
   // Example time slots (you can replace this with your own data)

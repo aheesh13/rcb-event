@@ -15,8 +15,28 @@
   border-radius: 15px;
   background-color: #f0f0f0;
   cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition */
 }
 
-.selected {
-  background-color: #ffcccb;
+.time-slot.selected {
+  background-color: #007bff; /* Change background color for selected time slot */
+  color: white; /* Text color */
+  animation: pulse 0.5s; /* Add pulse animation */
+}
+
+.time-slot:hover {
+  background-color: lavender;
+}
+
+/* Keyframes for pulse animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

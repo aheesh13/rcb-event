@@ -1,8 +1,9 @@
 import React from 'react';
+import "../CustomCss/RefundPolicy.css";
 
 const RefundPolicy = () => {
   return (
-    <div className="content">
+    <div className="refund-content">
       <h2>Refund Policy</h2>
       <p>
         Booking Advance Rs. 500 only<br />

@@ -2,7 +2,7 @@
 import React from "react";
 import Card from "./Card"; 
 import image1 from "../Images/Img1.jpeg";
-import image2 from "../Images/Img2.jpeg";
+import image2 from "../Images/Img4.jpeg";
 
 const Cards = () => {
   return (
@@ -10,12 +10,12 @@ const Cards = () => {
       <Card
         imageUrl={image1}
         title="Title 1"
-        description="Description for Card 1 goes here..."
+        description="Floor 1 Celebration"
       />
       <Card
         imageUrl={image2}
         title="Title 2"
-        description="Description for Card 2 goes here..."
+        description="Roof Top Celebration"
       />
     </div>
   );
