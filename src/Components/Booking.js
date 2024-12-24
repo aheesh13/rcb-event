@@ -9,10 +9,15 @@ const Booking = () => {
   const [selectedDate, setSelectedDate] = useState(null);
   const [numberOfPersons, setNumberOfPersons] = useState(1);
   const [selectedOccasion, setSelectedOccasion] = useState("");
-
+  const [selectedSlot, setSelectedSlot] = useState("");
+  const [validationError, setValidationError] = useState("");
 
   const handleDateChange = (date) => {
     setSelectedDate(date);
+  };
+
+  const handleSlotChange = (slot) => {
+    setSelectedSlot(slot);
   };
  
  
@@ -25,18 +30,21 @@ const Booking = () => {
   };
 
   const handleProceedToPayment = () => {
-    console.log("State being passed:", {
-      date: selectedDate,
-      persons: numberOfPersons,
-      occasion: selectedOccasion
-    });
+    if (!selectedDate || numberOfPersons < 1 || !selectedOccasion || !selectedSlot) {
+      setValidationError("Please fill out all fields before proceeding to payment.");
+      return;
+    }
+
+    // Clear any previous error
+    setValidationError("");
   
     navigate("/payment", {
       state: {
         bookingDetails: { 
           date: selectedDate,
           persons: numberOfPersons,
-          occasion: selectedOccasion
+          occasion: selectedOccasion,
+          slot: selectedSlot
         } 
       }
     });
@@ -46,12 +54,16 @@ const Booking = () => {
   return (
     <div className="booking-container">
       <div className="booking-image-container">
-        <img src={image1} alt="Your Image" />
+        <img src={image1} alt="None" />
       </div>
       <div className="booking-details">
         <h2>Booking Details</h2>
   
-        <Calendar selectedDate={selectedDate} onDateChange={handleDateChange} />
+        <Calendar 
+            selectedDate={selectedDate} 
+            onDateChange={handleDateChange} 
+            onSlotChange={handleSlotChange}
+         />
         
         <div className="number-of-person">
           <label className="booking-num-person-label" htmlFor="numberOfPersons">Number of Persons:</label>
@@ -123,11 +135,8 @@ const Booking = () => {
           </div>
         
         </div>
-        
+          {validationError && <div className="error-message">{validationError}</div>} {/* Display error message */}
           <button onClick={handleProceedToPayment} className="payment-proceed-button">Proceed To Payment</button>
-
-       
-      
       </div>
     </div>
   );

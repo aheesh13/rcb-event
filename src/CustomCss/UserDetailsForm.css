@@ -1,6 +1,9 @@
 .user-details-form {
-  width: 400px;
+  width: 100%; /* Set width to 100% for responsiveness */
+  max-width: 400px; /* Set a maximum width for larger screens */
   padding: 20px;
+  padding-left: 0; /* Remove fixed left padding */
+  box-sizing: border-box; /* Ensure padding is included within the width */
 }
 
 .form-group {
@@ -11,6 +14,7 @@
 label {
   left: 10px;
   top: 50%;
+  transform: translateY(-50%); /* Center the label vertically */
 }
 
 input[type="text"],
@@ -18,11 +22,12 @@ input[type="email"],
 input[type="tel"],
 input[type="password"],
 select {
-  width: 100%;
+  width: 100%; /* Full width for input fields */
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   padding-top: 20px;
+  box-sizing: border-box; /* Ensure padding is included within the width */
 }
 
 input[type="text"]::placeholder,
@@ -56,13 +61,14 @@ select:not(:placeholder-shown) + label {
 button[type="submit"] {
   margin-top: 10px;
   display: inline-block;
-padding: 10px 20px;
-background-color: #007bff;
-color: #fff;
-border: none;
-border-radius: 4px;
-font-size: 16px;
-cursor: pointer;
+  width: 100%; /* Make button full width */
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 .user-details button:hover {
@@ -71,6 +77,7 @@ cursor: pointer;
 
 .user-details h2 {
   margin-bottom: 20px;
+  text-align: center; /* Center the heading */
 }
  
 .form-group label {
@@ -80,9 +87,10 @@ cursor: pointer;
 }
 
 .form-group input {
-  width: 100%;
+  width: 100%; /* Ensure inputs take up full width */
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 14px;
+  box-sizing: border-box; /* Ensure padding is included within the width */
 }

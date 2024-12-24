@@ -42,34 +42,33 @@
   
 /* Additional Content CSS */
   
-  .additional-content {
-    text-align: center;
-    padding: 20px;
-    animation: fadeInAnimation ease 3s;
-    animation-iteration-count:2;
-    animation-fill-mode: forwards;
-  }
+.additional-content {
+  text-align: center;
+  padding: 20px;
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 2;
+  animation-fill-mode: forwards;
 
-  @keyframes fadeInAnimation{
-    0% {
-      opacity: 0;
-    }
+}
 
-    100% {
-      opacity: 1;
-    }
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
   }
-  
-  .additional-content h2 {
-    font-size: 80px;
-    margin-bottom: 10px;
+  100% {
+    opacity: 1;
   }
-  
-  .additional-content p {
-    font-size: 26px;
-    line-height: 1.5;
-  }
-  
+}
+
+.additional-content h2 {
+  font-size: 70px; /* Decreased from 80px */
+  margin-bottom: 10px;
+}
+
+.additional-content p {
+  font-size: 25px; /* Decreased from 26px */
+  line-height: 1.5;
+}
 
 
   /* Logo Styles */
@@ -146,5 +145,32 @@
 
   .content p {
     font-size: 14px;
+  }
+
+  .additional-content {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .additional-content h2 {
+    font-size: 30px; /* Adjust heading size for smaller screens */
+  }
+
+  .additional-content p {
+    font-size: 16px; /* Adjust paragraph size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .additional-content {
+    padding: 10px;
+  }
+
+  .additional-content h2 {
+    font-size: 24px; /* Further adjust heading size for mobile */
+  }
+
+  .additional-content p {
+    font-size: 14px; /* Further adjust paragraph size for mobile */
   }
 }

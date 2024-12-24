@@ -1,11 +1,18 @@
 // TimeSlots.js
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../CustomCss/TimeSlots.css";
 
-const TimeSlots = ({ selectedDate }) => {
+const TimeSlots = ({ selectedDate, onSlotChange }) => {
   // Example time slots (you can replace this with your own data)
   const timeSlots = ["10:00 AM", "12:00 PM", "2:00 PM", "4:00 PM"];
   const [selectedSlot, setSelectedSlot] = useState(null);
+
+  useEffect(() => {
+    // Pass the selected slot to parent when it changes
+    if (onSlotChange) {
+      onSlotChange(selectedSlot);
+    }
+  }, [selectedSlot, onSlotChange]);
 
   const handleSlotClick = (slot) => {
     setSelectedSlot(slot === selectedSlot ? null : slot);

@@ -1,20 +1,12 @@
 import React, { useState } from "react";
 import "../CustomCss/UserDetailsForm.css";
 
-const UserDetailsForm = () => {
+const UserDetailsForm = ({ onUserDetailsSubmit }) => {
   const [formData, setFormData] = useState({
     firstName: "",
-    lastName: "",
-    companyName: "",
-    country: "India",
-    streetAddress: "",
-    apartment: "",
-    city: "",
-    state: "",
-    pinCode: "",
+    displayName: "",
     phone: "",
     email: "",
-    createAccount: false
   });
 
   const handleChange = (e) => {
@@ -25,8 +17,8 @@ const UserDetailsForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // You can handle form submission logic here
-    console.log(formData);
+      onUserDetailsSubmit(formData);
+      alert('User Data Saved'); // Pass data to parent
   };
 
   return (
@@ -38,7 +30,7 @@ const UserDetailsForm = () => {
             htmlFor="firstName"
             className={formData.firstName ? "active" : ""}
           >
-            First Name *
+            Booking Name *
           </label>
           <input
             type="text"
@@ -52,106 +44,31 @@ const UserDetailsForm = () => {
         </div>
         <div className="form-group">
           <label
-            htmlFor="lastName"
-            className={formData.lastName ? "active" : ""}
+            htmlFor="displayName"
+            className={formData.displayName ? "active" : ""}
           >
-            Last Name *
+            Display Name *
           </label>
           <input
             type="text"
-            id="lastName"
-            name="lastName"
-            value={formData.lastName}
+            id="displayName"
+            name="displayName"
+            value={formData.displayName}
             onChange={handleChange}
+            placeholder="Display Name"
             required
           />
         </div>
+       
         <div className="form-group">
-          <label htmlFor="companyName">Company Name (optional)</label>
-          <input
-            type="text"
-            id="companyName"
-            name="companyName"
-            value={formData.companyName}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="country">Country / Region *</label>
-          <input
-            type="text"
-            id="country"
-            name="country"
-            value={formData.country}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="streetAddress">Street address *</label>
-          <input
-            type="text"
-            id="streetAddress"
-            name="streetAddress"
-            value={formData.streetAddress}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="apartment">
-            Apartment, suite, unit, etc. (optional)
-          </label>
-          <input
-            type="text"
-            id="apartment"
-            name="apartment"
-            value={formData.apartment}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="city">Town / City *</label>
-          <input
-            type="text"
-            id="city"
-            name="city"
-            value={formData.city}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="state">State</label>
-          <select
-            id="state"
-            name="state"
-            value={formData.state}
-            onChange={handleChange}
-          >
-            <option value="">Select an option...</option>
-            {/* Add options for states */}
-          </select>
-        </div>
-        <div className="form-group">
-          <label htmlFor="pinCode">PIN Code *</label>
-          <input
-            type="text"
-            id="pinCode"
-            name="pinCode"
-            value={formData.pinCode}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="phone">Phone *</label>
+          <label htmlFor="phone">Whats App Phone Number *</label>
           <input
             type="tel"
             id="phone"
             name="phone"
             value={formData.phone}
             onChange={handleChange}
+            placeholder="Whats App Phone Number"
             required
           />
         </div>
@@ -163,10 +80,11 @@ const UserDetailsForm = () => {
             name="email"
             value={formData.email}
             onChange={handleChange}
+            placeholder="Email Address"
             required
           />
         </div>
-        <div className="form-group">
+        {/* <div className="form-group">
           <label>
             Create an account?
             <input
@@ -176,7 +94,7 @@ const UserDetailsForm = () => {
               onChange={handleChange}
             />
           </label>
-        </div>
+        </div> */}
         <button type="submit">Submit</button>
       </form>
     </div>

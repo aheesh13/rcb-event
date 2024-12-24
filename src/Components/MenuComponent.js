@@ -10,15 +10,21 @@ const Menu = () => {
       </Link>
       </div>
       <div className="navigation">
-        <Link to="/" className="nav-link">
+      <Link to="/" className="nav-link">
           <button className="nav-button">Home</button>
-        </Link>
+          </Link>
         <Link to="/contact" className="nav-link">
           <button className="nav-button">Contact Us</button>
-        </Link>
+          </Link>
         <Link to="/terms" className="nav-link">
           <button className="nav-button">Refund Policy</button>
-        </Link>
+          </Link>
+          <Link to="/speed" className="nav-link">
+          <button className="nav-button">TypeSpeedCalc</button>
+          </Link>
+          <Link to="/whychooseus" className="nav-link">
+          <button className="nav-button">WhyChooseUs</button>
+          </Link>
       </div>
     </div>
   );

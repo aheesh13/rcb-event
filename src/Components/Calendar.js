@@ -3,12 +3,14 @@ import React, { useState } from "react";
 import "../CustomCss/Calendar.css"; // Import your CSS file for styling
 import TimeSlots from "./TimeSlots";
 
-const Calendar = ({ selectedDate, onDateChange }) => {
+const Calendar = ({ selectedDate, onDateChange, onSlotChange}) => {
   const [currentDate, setCurrentDate] = useState(new Date());
 
   const handleDateChange = (date) => {
     onDateChange(date); // Call the prop function to update the selected date
   };
+
+ 
 
   const daysInMonth = new Date(
     currentDate.getFullYear(),
@@ -75,7 +77,7 @@ const Calendar = ({ selectedDate, onDateChange }) => {
           {renderCalendar()}
         </div>
       </div>
-      {selectedDate && <TimeSlots selectedDate={selectedDate} />}{" "}
+      {selectedDate && <TimeSlots selectedDate={selectedDate} onSlotChange={onSlotChange} />}{" "}
       {/* Render TimeSlots component if date is selected */}
     </div>
   );

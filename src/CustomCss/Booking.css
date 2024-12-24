@@ -3,6 +3,7 @@
 /* Container for the booking details */
 .booking-container {
   display: flex;
+  flex-wrap: wrap;
   animation: fadeIn 0.5s ease-in-out; /* Apply fade-in animation */
 }
 
@@ -21,7 +22,8 @@
 
 /* Container for the booking details */
 .booking-details {
-  margin-left: 20px;
+  margin-left: 100px;
+  
 }
 
 /* Input field for number of persons */
@@ -43,6 +45,7 @@
 /* Container for occasion selection */
 .booking-occasion-select {
   margin-top: 20px;
+  
 }
 
 /* Style for radio buttons and labels */
@@ -105,6 +108,7 @@
 
 
 .payment-proceed-button {
+  width: 100%; /* Full width on mobile */
   padding: 12px 24px; 
   background-color: #007bff; 
   color: #fff; 
@@ -118,4 +122,36 @@
 
 .payment-proceed-button:hover {
   background-color: #0056b3;
+}
+
+.error-message {
+  color: #721c24; /* Dark red text */
+  background-color: #f8d7da; /* Light red background */
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
+  border: 1px solid #f5c6cb; /* Red border */
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Media query for screens 768px and below */
+@media screen and (max-width: 768px) {
+  .booking-container {
+    flex-direction: column; /* Stack content vertically on mobile */
+  }
+
+  .booking-image-container,
+  .booking-details {
+    width: 100%; /* Ensure full width for both containers on mobile */
+    margin-left: 0; /* Remove left margin */
+  }
+
+  .booking-details {
+    margin-top: 20px; /* Add spacing above booking details */
+  }
+
+  .booking-occasion-select label {
+    padding: 10px; /* Adjust padding for better touch targets */
+  }
 }
