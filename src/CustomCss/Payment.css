@@ -1,0 +1,34 @@
+.payment-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  flex-wrap: wrap; /* Allow wrapping */
+}
+
+.user-details,
+.order-details {
+  flex: 1;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  height: auto;
+  width: 100%; /* Ensure full width on mobile */
+}
+
+/* Media query for screens 768px and below */
+@media screen and (max-width: 768px) {
+  .payment-container {
+      flex-direction: column; /* Stack the elements vertically */
+      align-items: center; /* Center the content */
+      padding: 10px;
+  }
+
+  .user-details,
+  .order-details {
+      margin: 10px 0; /* Minimal margin between sections */
+      width: 90%; /* Slightly reduced width for better spacing */
+  }
+}

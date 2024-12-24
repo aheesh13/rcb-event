@@ -1,0 +1,110 @@
+/* OrderDetails.css */
+
+.order-details {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px; /* Adjust max-width as needed */
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.order-details h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.order-summary table,
+.order-total table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.order-summary th,
+.order-summary td,
+.order-total th,
+.order-total td {
+  border: 1px solid #ddd;
+  padding: 12px;
+}
+
+.order-total th,
+.order-total td {
+  background-color: #f1f1f1;
+}
+
+.payment-options button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.payment-options button:hover {
+  background-color: #0056b3;
+}
+
+.coupon-section input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 40px
+}
+
+.coupon-section button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.coupon-section button:hover {
+  background-color: #0056b3;
+}
+
+.payment-provider {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.terms-condition label {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.terms-condition input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+
+.payment-status-success {
+  background-color: #d4edda; /* Light green background */
+  color: #155724; /* Dark green text */
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 20px;
+  border: 1px solid #c3e6cb; /* Green border */
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Error Message */
+.payment-status-error {
+  background-color: #f8d7da; /* Light red background */
+  color: #721c24; /* Dark red text */
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 20px;
+  border: 1px solid #f5c6cb; /* Red border */
+  font-size: 16px;
+  text-align: center;
+}

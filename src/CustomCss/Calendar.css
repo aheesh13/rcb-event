@@ -1,0 +1,118 @@
+.calendar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.calendar {
+  width: 100%; /* Set to 100% to be responsive */
+  max-width: 500px; /* Ensure maximum width on larger screens */
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+}
+
+.calendar-header button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.calendar-header button:focus {
+  outline: none;
+}
+
+.calendar-header button:hover {
+  opacity: 0.8;
+}
+
+.calendar-header div {
+  font-size: 1.2rem;
+}
+
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 7 equal columns */
+  gap: 2px;
+}
+
+.calendar-day {
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.calendar-day:hover {
+  background-color: lavender;
+}
+
+.day-name {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.selected-day {
+  color: white;
+  border-radius: 200%;
+  animation: pulse 0.5s;
+  background-color: black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.selected-day:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Keyframes for pulse animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .calendar {
+    width: 90%; /* Make the calendar take 90% of the screen width */
+    max-width: none; /* Remove the maximum width */
+  }
+
+  .calendar-header div {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+
+  .calendar-day {
+    padding: 8px; /* Reduce padding for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .calendar-header div {
+    font-size: 0.9rem; /* Further reduce font size */
+  }
+
+  .calendar-day {
+    padding: 6px; /* Further reduce padding */
+  }
+}

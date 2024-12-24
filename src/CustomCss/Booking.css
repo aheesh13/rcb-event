@@ -1,0 +1,157 @@
+
+
+/* Container for the booking details */
+.booking-container {
+  display: flex;
+  flex-wrap: wrap;
+  animation: fadeIn 0.5s ease-in-out; /* Apply fade-in animation */
+}
+
+/* Container for the image */
+.booking-image-container {
+  width: 700px; /* Adjust width as needed */
+}
+
+/* Image inside the container */
+.booking-image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px; /* Add border radius to image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow to image */
+}
+
+/* Container for the booking details */
+.booking-details {
+  margin-left: 100px;
+  
+}
+
+/* Input field for number of persons */
+.number-of-person input[type="number"] {
+  width: 100px; /* Adjust width as needed */
+  padding: 10px; /* Add padding for spacing */
+  border: 1px solid #ccc; /* Add border */
+  border-radius: 20px; /* Make border radius round */
+  transition: border-color 0.3s ease-in-out; /* Smooth transition */
+  font-family: 'Roboto', sans-serif; /* Specify font family */
+  font-size: 16px; /* Specify font size */
+}
+
+/* Apply hover effect to input field */
+.number-of-person input[type="number"]:hover {
+  border-color: #007bff; /* Change border color on hover */
+}
+
+/* Container for occasion selection */
+.booking-occasion-select {
+  margin-top: 20px;
+  
+}
+
+/* Style for radio buttons and labels */
+.booking-occasion-select input[type="radio"] {
+  display: none; /* Hide the default radio buttons */
+}
+
+.booking-occasion-select label {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-right: 10px;
+  background-color: transparent;
+  color: #333; /* Text color for labels */
+  border-radius: 20px; /* Make border radius round */
+  cursor: pointer; /* Change cursor to pointer */
+  transition: background-color 0.3s ease-in-out; /* Smooth transition */
+  font-family: 'Jersey', sans-serif; /* Specify font family */
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Apply hover effect to labels */
+.booking-occasion-select label:hover {
+  background-color: #007bff; /* Change background color on hover */
+  color: #fff; /* Text color on hover */
+}
+
+/* Style for custom radio buttons */
+.booking-occasion-select input[type="radio"] + label::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border: 2px solid #333; /* Border for radio button */
+  border-radius: 50%; /* Make border radius round */
+  transition: background-color 0.3s ease-in-out; 
+}
+
+
+.booking-occasion-select input[type="radio"]:checked + label::before {
+  background-color: #007bff; 
+}
+
+
+.booking-num-person-label {
+  display: inline-block; 
+  font-family: 'Roboto', sans-serif; 
+  font-size: 18px; 
+  color: #333;
+  margin-bottom: 10px; 
+  transition: color 0.3s ease-in-out; 
+}
+
+
+.booking-num-person-label:hover {
+  color: black; 
+  cursor: pointer; 
+}
+
+
+.payment-proceed-button {
+  width: 100%; /* Full width on mobile */
+  padding: 12px 24px; 
+  background-color: #007bff; 
+  color: #fff; 
+  border: none; 
+  border-radius: 20px; 
+  cursor: pointer; 
+  font-family: 'Roboto', sans-serif; 
+  font-size: 16px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.payment-proceed-button:hover {
+  background-color: #0056b3;
+}
+
+.error-message {
+  color: #721c24; /* Dark red text */
+  background-color: #f8d7da; /* Light red background */
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
+  border: 1px solid #f5c6cb; /* Red border */
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Media query for screens 768px and below */
+@media screen and (max-width: 768px) {
+  .booking-container {
+    flex-direction: column; /* Stack content vertically on mobile */
+  }
+
+  .booking-image-container,
+  .booking-details {
+    width: 100%; /* Ensure full width for both containers on mobile */
+    margin-left: 0; /* Remove left margin */
+  }
+
+  .booking-details {
+    margin-top: 20px; /* Add spacing above booking details */
+  }
+
+  .booking-occasion-select label {
+    padding: 10px; /* Adjust padding for better touch targets */
+  }
+}
